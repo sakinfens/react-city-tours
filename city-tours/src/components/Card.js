@@ -1,17 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Places from '../content/places'
 
-function Card (){
 
+function Card (){
+    const [item, setItem] = useState(false)
+
+    const showContent = ()=>{
+        setItem(!item)
+    }
+
+    
     return(
         <div className="info">
             {
                 Places.map(spot=>(
                     <div className='content'>
                         <img src={spot.img}/>
-                        <h1>{spot.city}</h1>
-                        <h2>{spot.name}</h2>
-                        <p>info</p>
+                        <div className='content-b'>
+                            <h1>{spot.city}</h1>
+                            <h2>{spot.name}</h2>
+                            <p onClick={showContent}>info</p>
+                            {item && <p>{spot.info}</p>}
+                        </div>
                     </div>
 
                 ))

@@ -27,6 +27,8 @@ nav li{
 .content img{
   width: 250px;
   height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   
 }
 .info{
@@ -35,14 +37,14 @@ nav li{
   align-items: center;
   font-size: small;
   border: 1px solid black;
-  
-  
 }
 .content{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  
   width: 250px;
   margin: 20px;
   background-color: grey;
+}
+.content-b{
+  padding: 5px;
 }
